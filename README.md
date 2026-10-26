@@ -1,11 +1,11 @@
-# Tux Store · servidor `pinguino-emperador`
+# Tux Store · servidor pinguino-emperador
 
 ![Tux Store CI](../../actions/workflows/tuxstore.yml/badge.svg)
 
 Gestor de paquetes de consola hecho en C++ con una **lista enlazada** (catalogo),
 una **cola de prioridad** (descargas) y una **pila** (disco), con persistencia en `tuxstore.txt`.
 
-Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `42964` · Grupo `B`
+Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC 42964 · Grupo B
 
 ## Equipo
 
