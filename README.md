@@ -11,7 +11,7 @@ Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `<NRC>` 
 
 | Integrante | Usuario de GitHub | Rol | Requisitos |
 |---|---|---|---|
-|FERNANDEZ RAMIREZ PATRICK MICHAEL|  | Lider (scrum) |  |
+|FERNANDEZ RAMIREZ PATRICK MICHAEL|  | Lider (scrum) |Gestión del proyecto|
 |Ticona Pacco Alex Royer|  | Dev · catalogo | R1, R5 |
 |MACHACA APAZA EDSON JAVIER|  | Dev · descargas | R2, R3 |
 |Flores Castillo Basiler Emanuel|  | Dev · disco y archivo | R4, R6 |
