@@ -3,7 +3,8 @@
 Si no usaron IA, escriban: **No usamos IA.**
 
 | Fecha | Integrante | Herramienta | Que preguntamos | Que aprendimos | Como lo comprobamos |
-|---|---|---|---|---|---|
+
+|---|Quispe Mollenido Juan Diegp| No usamos IA |---|---|---|
 |  |  |  |  |  |  |
 
 Recuerden: se permite preguntar conceptos y practicar con ejemplos que NO son de Tux Store.
