@@ -1,4 +1,4 @@
-# Tux Store · servidor `<nombre-del-servidor>`
+# Tux Store · servidor `pinguino-emperador`
 
 ![Tux Store CI](../../actions/workflows/tuxstore.yml/badge.svg)
 
@@ -11,11 +11,11 @@ Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `<NRC>` 
 
 | Integrante | Usuario de GitHub | Rol | Requisitos |
 |---|---|---|---|
-|  |  | Lider (scrum) |  |
-|  |  | Dev · catalogo | R1, R5 |
-|  |  | Dev · descargas | R2, R3 |
-|  |  | Dev · disco y archivo | R4, R6 |
-|  |  | QA y documentacion | R7, pruebas |
+|FERNANDEZ RAMIREZ PATRICK MICHAEL|  | Lider (scrum) |  |
+|Ticona Pacco Alex Royer|  | Dev · catalogo | R1, R5 |
+|MACHACA APAZA EDSON JAVIER|  | Dev · descargas | R2, R3 |
+|Flores Castillo Basiler Emanuel|  | Dev · disco y archivo | R4, R6 |
+|Juan Diego Quispe Mollenido|  | QA y documentacion | R7, pruebas |
 
 Tablero del equipo: `<enlace a GitHub Projects>` · Presentacion: `<enlace>`
 
