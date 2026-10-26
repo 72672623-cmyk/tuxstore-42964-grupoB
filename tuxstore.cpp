@@ -45,15 +45,17 @@ struct NodoBloque {
     NodoBloque *sig;
 };
 
-// ===== FICHA =====
-const string SERVIDOR = "pinguino-de-prueba";
-const int VELOCIDAD   = 4;
-const int DISCO       = 150;
-const int N_APPS      = 8;
-string fNombre[N_APPS]  = {"discord", "htop", "openssh", "vlc", "cowsay", "godot", "neofetch", "obs"};
-string fVersion[N_APPS] = {"0.0.71",  "3.3",  "9.6",     "3.0", "3.03",   "4.3",   "7.1",      "30.1"};
-int    fMb[N_APPS]      = {95,        2,      8,         45,    1,        120,     1,          110};
-int    fPrio[N_APPS]    = {3,         1,      1,         3,     3,        2,       3,          3};
+// ===== FICHA ===== (copiar tal cual en tuxstore.cpp)
+const string SERVIDOR = "pinguino-emperador";
+const int VELOCIDAD = 6;
+const int DISCO = 310;
+const int N_APPS = 8;
+string fNombre[N_APPS] = {"firefox", "neovim", "vlc", "krita", "neofetch",
+"fail2ban", "python3", "openssh"};
+string fVersion[N_APPS] = {"128", "0.9", "3.0", "5.2", "7.1", "1.0", "3.12",
+"9.6"};
+int fMb[N_APPS] = {210, 18, 45, 180, 1, 2, 38, 8};
+int fPrio[N_APPS] = {2, 2, 3, 3, 3, 1, 2, 1};
 // =================
 
 string estadoTexto(int e) {
