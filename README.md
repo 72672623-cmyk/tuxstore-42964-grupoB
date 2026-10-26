@@ -1,4 +1,4 @@
-# Tux Store · servidor `pinguino-de-prueba`
+# Tux Store · servidor pinguino-emperador
 
 ![Tux Store CI](../../actions/workflows/tuxstore.yml/badge.svg)
 
