@@ -11,11 +11,11 @@ Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC 42964 ·
 
 | Integrante | Usuario de GitHub | Rol | Requisitos |
 |---|---|---|---|
-|FERNANDEZ RAMIREZ PATRICK MICHAEL|  | Lider (scrum) |Gestión del proyecto|
-|Ticona Pacco Alex Royer|  | Dev · catalogo | R1, R5 |
-|MACHACA APAZA EDSON JAVIER|  | Dev · descargas | R2, R3 |
-|FLORES CASTILLO BASILER EMANUEL|  | Dev · disco y archivo | R4, R6 |
-|QUISPE MOLLENIDO JUAN DIEGO|  | QA y documentacion | R7, pruebas |
+|FERNANDEZ RAMIREZ PATRICK MICHAEL| 72672623-cmyk| Lider (scrum) |Gestión del proyecto|
+|Ticona Pacco Alex Royer| Royer20061 | Dev · catalogo | R1, R5 |
+|MACHACA APAZA EDSON JAVIER| Edson-JMA | Dev · descargas | R2, R3 |
+|FLORES CASTILLO BASILER EMANUEL| Basilcon | Dev · disco y archivo | R4, R6 |
+|QUISPE MOLLENIDO JUAN DIEGO| 61161913-jpg | QA y documentacion | R7, pruebas |
 
 Tablero del equipo: `<enlace a GitHub Projects>` · Presentacion: `<enlace>`
 
