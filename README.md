@@ -1,23 +1,23 @@
-# Tux Store · servidor `<nombre-del-servidor>`
+# Tux Store · servidor `pinguino-de-prueba`
 
 ![Tux Store CI](../../actions/workflows/tuxstore.yml/badge.svg)
 
 Gestor de paquetes de consola hecho en C++ con una **lista enlazada** (catalogo),
 una **cola de prioridad** (descargas) y una **pila** (disco), con persistencia en `tuxstore.txt`.
 
-Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `<NRC>` · Grupo `<letra>`
+Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `42964` · Grupo `B`
 
 ## Equipo
 
 | Integrante | Usuario de GitHub | Rol | Requisitos |
 |---|---|---|---|
-|  |  | Lider (scrum) |  |
-|  |  | Dev · catalogo | R1, R5 |
-|  |  | Dev · descargas | R2, R3 |
-|  |  | Dev · disco y archivo | R4, R6 |
-|  |  | QA y documentacion | R7, pruebas |
+| FERNANDEZ RAMIREZ PATRICK MICHAEL | 72672623-cmyk | Lider (scrum) | Coordinacion, tablero y presentacion |
+| Ticona Pacco Alex Royer | alex-ticona | Dev · catalogo | R1, R5 |
+| MACHACA APAZA EDSON JAVIER | edson-machaca | Dev · descargas | R2, R3 |
+| Flores Castillo Basiler Emanuel | basiler-flores | Dev · disco y archivo | R4, R6 |
+| Juan Diego Quispe Mollenido | juan-quispe | QA y documentacion | R7, pruebas |
 
-Tablero del equipo: `<enlace a GitHub Projects>` · Presentacion: `<enlace>`
+Tablero del equipo: https://github.com/users/72672623-cmyk/projects/1/views/1 · Presentacion: `<enlace a la presentacion>`
 
 ## Como compilar y ejecutar
 
