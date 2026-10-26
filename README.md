@@ -14,8 +14,8 @@ Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `42964` 
 |FERNANDEZ RAMIREZ PATRICK MICHAEL|  | Lider (scrum) |Gestión del proyecto|
 |Ticona Pacco Alex Royer|  | Dev · catalogo | R1, R5 |
 |MACHACA APAZA EDSON JAVIER|  | Dev · descargas | R2, R3 |
-|Flores Castillo Basiler Emanuel|  | Dev · disco y archivo | R4, R6 |
-|Juan Diego Quispe Mollenido|  | QA y documentacion | R7, pruebas |
+|FLORES CASTILLO BASILER EMANUEL|  | Dev · disco y archivo | R4, R6 |
+|QUISPE MOLLENIDO JUAN DIEGO|  | QA y documentacion | R7, pruebas |
 
 Tablero del equipo: `<enlace a GitHub Projects>` · Presentacion: `<enlace>`
 
