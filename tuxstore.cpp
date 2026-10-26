@@ -11,7 +11,7 @@
                Ticona Pacco Alex Royer
                MACHACA APAZA EDSON JAVIER
                Flores Castillo Basiler Emanuel
-               Juan Diego Quispe Mollenido
+               QUISPE MOLLENIDO JUAN DIEGO
    ============================================================= */
 
 #include <iostream>
