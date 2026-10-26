@@ -5,9 +5,13 @@
    Institucion: Universidad Continental
    Semestre   : 2026-20
    Compilador : Dev-C++ (MinGW / GCC, C++11 o superior)
-   NRC        :
-   Grupo      :
-   Integrantes:
+   NRC        : 42964
+   Grupo      : B
+   Integrantes:FERNANDEZ RAMIREZ PATRICK MICHAEL
+               Ticona Pacco Alex Royer
+               MACHACA APAZA EDSON JAVIER
+               Flores Castillo Basiler Emanuel
+               Juan Diego Quispe Mollenido
    ============================================================= */
 
 #include <iostream>
