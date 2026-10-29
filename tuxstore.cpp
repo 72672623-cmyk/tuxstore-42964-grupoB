@@ -220,7 +220,21 @@ int main() {
         }
         else if (orden == "deshacer") {
             // TODO R4b
+           if (tope == nullptr) {
+              cout << "Nada que deshacer" << endl;
+        }  else {
+             NodoBloque *borrar = tope;
+              tope = tope->sig;
+              NodoApp *app = buscarApp(catalogo, borrar->nombre);
+              if (app != nullptr) {
+                 app->estado = DISPONIBLE;
+              }
+              libre = libre + borrar->mb;
+              cout << "Deshecho: " << borrar->nombre << " (" <<borrar->mb << " MB liberados, libres " << libre << " MB)" << endl;
+              delete borrar;
+           }
         }
+           
         else if (orden == "espacio") {
             // TODO R4c
            int cantBloques = 0;
