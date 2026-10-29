@@ -228,6 +228,7 @@ int main() {
               NodoApp *app = buscarApp(catalogo, borrar->nombre);
               if (app != nullptr) {
                  app->estado = DISPONIBLE;
+                 app->inicio = app->fin = app->espera = -1;
               }
               libre = libre + borrar->mb;
               cout << "Deshecho: " << borrar->nombre << " (" <<borrar->mb << " MB liberados, libres " << libre << " MB)" << endl;
