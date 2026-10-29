@@ -12,10 +12,10 @@ Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `42964` 
 | Integrante | Usuario de GitHub | Rol | Requisitos |
 |---|---|---|---|
 | FERNANDEZ RAMIREZ PATRICK MICHAEL | 72672623-cmyk | Lider (scrum) | Coordinacion, tablero y presentacion |
-| Ticona Pacco Alex Royer | alex-ticona | Dev · catalogo | R1, R5 |
-| MACHACA APAZA EDSON JAVIER | edson-machaca | Dev · descargas | R2, R3 |
-| Flores Castillo Basiler Emanuel | basiler-flores | Dev · disco y archivo | R4, R6 |
-| Juan Diego Quispe Mollenido | juan-quispe | QA y documentacion | R7, pruebas |
+| Ticona Pacco Alex Royer | Royer20061 | Dev · catalogo | R1, R5 |
+| MACHACA APAZA EDSON JAVIER | Edson-JMA | Dev · descargas | R2, R3 |
+| Flores Castillo Basiler Emanuel | Basilercon | Dev · disco y archivo | R4, R6 |
+| Juan Diego Quispe Mollenido | 61161913-jpg | QA y documentacion | R7, pruebas |
 
 Tablero del equipo: https://github.com/users/72672623-cmyk/projects/1/views/1 · Presentacion: `<enlace a la presentacion>`
 
