@@ -36,3 +36,6 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 - Asistentes:
 - Temas:
 - Acuerdos:
+## Cambios registrados
+
+- 28/10/2026 · Basiler Flores · Etiquetas de E1: se elimino `vct1`. Se mantiene `v.01` porque es el enlace enviado en la tarea C2 · E1, y `v0.1` es la etiqueta oficial, en el mismo commit `c479705`.
