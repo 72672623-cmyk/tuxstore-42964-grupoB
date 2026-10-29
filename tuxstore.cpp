@@ -208,12 +208,30 @@ int main() {
         }
         else if (orden == "historial") {
             // TODO R4a
+           if (tope == nullptr) {
+                cout << "(historial vacio)" << endl;
+            } else {
+                NodoBloque *aux = tope;
+                while (aux != nullptr) {
+                    cout << "  " << left << setw(12) << aux->nombre << right << setw(5) << aux->mb << " MB" << endl;
+                    aux = aux->sig;
+                }
+           }
         }
         else if (orden == "deshacer") {
             // TODO R4b
         }
         else if (orden == "espacio") {
             // TODO R4c
+           int cantBloques = 0;
+            NodoBloque *aux = tope;
+            while (aux != nullptr) {
+                cantBloques++;
+                aux = aux->sig;
+            }
+            int mbOcupados = DISCO - libre;
+            cout << "Disco: total " << DISCO << " MB | ocupado " << mbOcupados
+                 << " MB | libres " << libre << " MB | bloques " << cantBloques << endl;
         }
         else if (orden == "prioridad") {
             // TODO R5a
