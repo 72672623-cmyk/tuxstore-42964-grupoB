@@ -17,6 +17,8 @@ Estructura de Datos · Evaluacion por competencias C2 · 2026-20 · NRC `42964` 
 | Flores Castillo Basiler Emanuel | Basilercon | Dev · disco y archivo | R4, R6 |
 | Juan Diego Quispe Mollenido | 61161913-jpg | QA y documentacion | R7, pruebas |
 
+Repositorio: https://github.com/72672623-cmyk/tuxstore-42964-grupoB
+
 Tablero del equipo: https://github.com/users/72672623-cmyk/projects/1/views/1 · Presentacion: [presentacion/GRUPOB_TuxStore.pdf](presentacion/GRUPOB_TuxStore.pdf)
 
 ## Como compilar y ejecutar
