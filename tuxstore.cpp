@@ -388,16 +388,17 @@ int main() {
                 // TODO R6a
                 NodoApp *p = catalogo;
                 while (p != nullptr) {
-                    f << "A " << p->nombre << " " << p->version << " " << p->mb << " " << p->prioridad << " " << p->estado << "\n";
+                    f << "A " << p->nombre << " " << p->version << " " << p->mb << " "
+                      << p->prioridad << " " << p->estado << endl;
                     n++;
                     p = p->sig;
                 }
                 NodoBloque *b = tope;
                 while (b != nullptr) {
-                    f << "B " << b->nombre << " " << b->mb << "\n";
+                    f << "B " << b->nombre << " " << b->mb << endl;
                     m++;
                     b = b->sig;
-                }
+                }               
                 f.close();
                 cout << "Guardado: " << n << " apps y " << m << " bloques en " << ARCHIVO << endl;
             }
@@ -409,35 +410,57 @@ int main() {
             else {
                 int n = 0, m = 0;
                 // TODO R6b
-                while (catalogo != nullptr) { NodoApp *t = catalogo; catalogo = catalogo->sig; delete t; }
-                while (tope != nullptr) { NodoBloque *t = tope; tope = tope->sig; delete t; }
+                while (catalogo != nullptr) {
+                    NodoApp *aux = catalogo;
+                    catalogo = catalogo->sig;
+                    delete aux;
+                }
+                while (tope != nullptr) {
+                    NodoBloque *aux = tope;
+                    tope = tope->sig;
+                    delete aux;
+                }
+
                 libre = DISCO;
-                
-                string tipo;
-                while (f >> tipo) {
-                    if (tipo == "A") {
-                        string nom, ver; int mb, prio, est;
+                NodoBloque *finPila = nullptr;
+                char letra;
+                while (f >> letra) {
+                    if (letra == 'A') {
+                        string nom, ver;
+                        int mb, prio, est;
                         f >> nom >> ver >> mb >> prio >> est;
-                        agregarAlFinal(catalogo, nom, ver, mb, prio);
-                        NodoApp *app = buscarApp(catalogo, nom);
-                        app->estado = est;
-                        n++;
-                    } else if (tipo == "B") {
-                        string nom; int mb;
+                        if (agregarAlFinal(catalogo, nom, ver, mb, prio)) {
+                            NodoApp *app = buscarApp(catalogo, nom);
+                            if (app != nullptr) {
+                                app->estado = est;
+                            }
+                            n++;
+                        }
+                    } else if (letra == 'B') {
+                        string nom;
+                        int mb;
                         f >> nom >> mb;
                         NodoBloque *nuevo = new NodoBloque;
-                        nuevo->nombre = nom; nuevo->mb = mb; nuevo->sig = nullptr;
-                        if (tope == nullptr) tope = nuevo;
-                        else {
-                            NodoBloque *last = tope;
-                            while(last->sig != nullptr) last = last->sig;
-                            last->sig = nuevo;
+                        nuevo->nombre = nom;
+                        nuevo->mb = mb;
+                        nuevo->sig = nullptr;
+
+                        if (tope == nullptr) {
+                            tope = nuevo;
+                            finPila = nuevo;
+                        } else {
+                            finPila->sig = nuevo;
+                            finPila = nuevo;
                         }
-                        libre -= mb;
+                        libre = libre - mb;
                         m++;
                     }
                 }
-                reloj = 0; ultimaLlegada = 0; instalaciones = 0; sumaEspera = 0; mbDescargados = 0;
+                reloj = 0;
+                ultimaLlegada = 0;
+                instalaciones = 0;
+                sumaEspera = 0;
+                mbDescargados = 0;
                 cout << "Cargado: " << n << " apps y " << m << " bloques | libres " << libre
                      << " MB | turno nuevo" << endl;
             }
