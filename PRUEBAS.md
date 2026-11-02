@@ -7,7 +7,7 @@
 | P03 | R3 |  |  |  |  |
 | P04 | R4 |  |  |  |  |
 | P05 | R5 |  |  |  |  |
-| P06 | R6 | `guardar`, `salir`, abrir, `cargar`, `catalogo` | El mismo catalogo y el mismo espacio libre |  |  |
+| P06 | R6 | `guardar`, `cargar` | Guarda catalogo y pila en tuxstore.txt y al cargar reconstruye sin voltear el tope | `Guardado: 9 apps y 4 bloques en tuxstore.txt` / `Cargado: 9 apps y 4 bloques \| libres 104 MB \| turno nuevo` | SI |
 | P07 | R7 | `hola`, `instalar`, `procesar` con la fila vacia | Mensajes de error; el programa sigue |  |  |
 
 Agreguen todas las que necesiten. Incluyan casos con datos invalidos.
