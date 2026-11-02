@@ -39,3 +39,6 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 ## Cambios registrados
 
 - 28/10/2026 · Basiler Flores · Etiquetas de E1: se elimino `vct1`. Se mantiene `v.01` porque es el enlace enviado en la tarea C2 · E1, y `v0.1` es la etiqueta oficial, en el mismo commit `c479705`.
+- 01/11/2026 · Basiler Flores · Se unieron los PR #10 a #13 sin revision: se pidio  desde el 28/10 sin respuesta y se unieron para que entren en la v1.0.
+- 01/11/2026 · Basiler Flores · Se restauro mi codigo de R4 (historial, deshacer y espacio) en main, porque el commit "Refactor tuxstore.cpp" lo habia reemplazado.
+
