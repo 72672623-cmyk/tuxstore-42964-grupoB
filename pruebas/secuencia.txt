@@ -1,16 +1,27 @@
-instalar discord 0
-instalar htop 2
+buscar neo
+agregar gparted 1.5 3 1
+instalar neofetch 0
+instalar neovim 1
 instalar openssh 3
+fila
+procesar
+instalar vlc 4
+prioridad krita 1
+instalar krita 8
+instalar firefox 11
 fila
 procesar
 procesar
 procesar
-instalar vlc 31
 procesar
-instalar cowsay 35
-procesar
-reporte
+historial
 deshacer
 espacio
+retirar neofetch
+retirar openssh
+instalar fail2ban 32
+procesar
+procesar
+reporte
 guardar
 salir
