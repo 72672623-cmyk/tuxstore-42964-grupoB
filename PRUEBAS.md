@@ -7,7 +7,7 @@
 | P03 | R3 |  |  |  |  |
 | P04 | R4 |  | `historial`, `deshacer`, `espacio` | Libera el bloque del tope con delete, devuelve sus MB y la app pasa a disponible |  |
 | P05 | R5 |  |  |  |  |
-| P06 | R6 | `guardar`, `cargar` | Guarda catalogo y pila en tuxstore.txt y al cargar reconstruye sin voltear el tope | `Guardado: 9 apps y 4 bloques en tuxstore.txt` / `Cargado: 9 apps y 4 bloques \| libres 104 MB \| turno nuevo` | SI |
+| P06 | R6 | secuencia oficial hasta `guardar`, `salir`, abrir, `cargar`, `historial` | Guarda catalogo y pila en tuxstore.txt; al cargar recupera el catalogo, el disco y el espacio libre sin voltear el tope | `Guardado: 8 apps y 5 bloques en tuxstore.txt` / `Cargado: 8 apps y 5 bloques \| libres 57 MB \| turno nuevo` / historial: `vlc, fail2ban, neovim, krita, openssh` | SI |
 | P07 | R7 | `hola`, `instalar`, `procesar` con la fila vacia | Mensajes de error; el programa sigue |  |  |
 
 Agreguen todas las que necesiten. Incluyan casos con datos invalidos.
