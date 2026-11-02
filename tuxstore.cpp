@@ -5,7 +5,7 @@
    Institucion: Universidad Continental
    Semestre   : 2026-20
    Compilador : Dev-C++ (MinGW / GCC, C++11 o superior)
-   NRC        :  42964
+   NRC        : 42964
    Grupo      : B
    Integrantes: Edson Machaca, Basiler Flores, Juan Diego Quispe, Patrick Fernandez
    ============================================================= */
@@ -93,16 +93,34 @@ NodoApp* buscarApp(NodoApp *catalogo, string nombre) {
     NodoApp *p = catalogo;            // empiezo en el primer nodo
     while (p != nullptr) {            // recorro hasta el final de la lista
         if (p->nombre == nombre) {    // comparo el nombre del nodo con el buscado
-            return p;
+            return p;                 // lo encontre: devuelvo ese nodo
         }
-        p = p->sig;
+        p = p->sig;                   // paso al siguiente nodo
     }
-    return nullptr;
+    return nullptr;                   // no esta en el catalogo
 }
 
 bool agregarAlFinal(NodoApp *&catalogo, string nombre, string version, int mb, int prioridad) {
     // TODO R1b
-    return false;
+    if (nombre == "" || version == "" || mb <= 0 || prioridad < 1 || prioridad > 3) {
+        return false;
+    }
+    if (buscarApp(catalogo, nombre) != nullptr) {
+        return false; // Evita duplicados
+    }
+
+    NodoApp *nuevo = crearApp(nombre, version, mb, prioridad);
+    
+    if (catalogo == nullptr) {
+        catalogo = nuevo;
+    } else {
+        NodoApp *p = catalogo;
+        while (p->sig != nullptr) {
+            p = p->sig;
+        }
+        p->sig = nuevo;
+    }
+    return true;
 }
 
 void encolarConPrioridad(NodoFila *&frente, NodoFila *&final, string nombre, int llegada, int prioridad) {
@@ -144,23 +162,23 @@ void leerOrden(string linea, string &orden, string &a1, string &a2, string &a3, 
 }
 
 void ayuda() {
-    cout << "  ORDEN (espanol)            EN LINUX                      QUE HACE" << endl;
-    cout << "  catalogo                   apt list                      ver todas las apps" << endl;
-    cout << "  buscar <texto>             apt search <texto>            buscar por nombre" << endl;
-    cout << "  info <app>                 apt show <app>                ficha de una app" << endl;
-    cout << "  agregar <app> <v> <MB> <p> -                             nueva app (p = 1, 2 o 3)" << endl;
-    cout << "  prioridad <app> <p>        -                             cambiar la prioridad" << endl;
-    cout << "  retirar <app>              sudo apt purge <app>          borrar del catalogo" << endl;
-    cout << "  instalar <app> <seg>       sudo apt install <app> <seg>  pedir una app" << endl;
-    cout << "  fila                       -                             ver la fila de descargas" << endl;
-    cout << "  procesar                   -                             descargar la del frente" << endl;
-    cout << "  historial                  dnf history                   bloques de disco (pila)" << endl;
-    cout << "  deshacer                   dnf history undo last         liberar el ultimo bloque" << endl;
-    cout << "  espacio                    df                            estado del disco" << endl;
-    cout << "  guardar                    dpkg --get-selections         guardar en tuxstore.txt" << endl;
-    cout << "  cargar                     dpkg --set-selections         cargar tuxstore.txt" << endl;
-    cout << "  reporte                    -                             resumen del turno" << endl;
-    cout << "  salir                      exit                          terminar" << endl;
+    cout << "  ORDEN (espanol)            EN LINUX                     QUE HACE" << endl;
+    cout << "  catalogo                   apt list                     ver todas las apps" << endl;
+    cout << "  buscar <texto>             apt search <texto>           buscar por nombre" << endl;
+    cout << "  info <app>                 apt show <app>               ficha de una app" << endl;
+    cout << "  agregar <app> <v> <MB> <p> -                            nueva app (p = 1, 2 o 3)" << endl;
+    cout << "  prioridad <app> <p>        -                            cambiar la prioridad" << endl;
+    cout << "  retirar <app>              sudo apt purge <app>         borrar del catalogo" << endl;
+    cout << "  instalar <app> <seg>       sudo apt install <app> <seg> pedir una app" << endl;
+    cout << "  fila                       -                            ver la fila de descargas" << endl;
+    cout << "  procesar                   -                            descargar la del frente" << endl;
+    cout << "  historial                  dnf history                  bloques de disco (pila)" << endl;
+    cout << "  deshacer                   dnf history undo last        liberar el ultimo bloque" << endl;
+    cout << "  espacio                    df                           estado del disco" << endl;
+    cout << "  guardar                    dpkg --get-selections        guardar en tuxstore.txt" << endl;
+    cout << "  cargar                     dpkg --set-selections        cargar tuxstore.txt" << endl;
+    cout << "  reporte                    -                            resumen del turno" << endl;
+    cout << "  salir                      exit                         terminar" << endl;
 }
 
 int main() {
@@ -186,16 +204,64 @@ int main() {
         cout << "> " << linea << endl;
 
         if (orden == "catalogo") {
-            // TODO R1c
+            if (catalogo == nullptr) {
+                cout << "(catalogo vacio)\n";
+            } else {
+                NodoApp* p = catalogo;
+                while (p != nullptr) {
+                    mostrarApp(p);
+                    p = p->sig;
+                }
+            }
         }
         else if (orden == "buscar") {
             // TODO R1d
+            if (a1 == "") {
+                cout << "Uso: buscar <texto>\n";
+            } else {
+                bool hallado = false;
+                NodoApp *p = catalogo;
+                while (p != nullptr) {
+                    if (p->nombre.find(a1) != string::npos) {
+                        mostrarApp(p);
+                        hallado = true;
+                    }
+                    p = p->sig;
+                }
+                if (!hallado) {
+                    cout << "Sin resultados para " << a1 << "\n";
+                }
+            }
         }
         else if (orden == "info") {
             // TODO R1e
+            if (a1 == "") {
+                cout << "Uso: info <app>\n";
+            } else {
+                NodoApp *app = buscarApp(catalogo, a1);
+                if (app == nullptr) {
+                    cout << "E: No existe la app " << a1 << "\n";
+                } else {
+                    mostrarApp(app);
+                    if (app->estado == INSTALADA) {
+                        cout << "  inicio " << app->inicio << " | fin " << app->fin 
+                             << " | espera " << app->espera << "\n";
+                    }
+                }
+            }
         }
         else if (orden == "agregar") {
             // TODO R1f
+            int mb, prio;
+            if (a1 == "" || a2 == "" || !aEntero(a3, mb) || !aEntero(a4, prio)) {
+                cout << "Uso: agregar <app> <version> <MB> <prioridad>\n";
+            } else {
+                if (agregarAlFinal(catalogo, a1, a2, mb, prio)) {
+                    cout << "Agregada: " << a1 << "\n";
+                } else {
+                    cout << "E: No se pudo agregar " << a1 << "\n";
+                }
+            }
         }
         else if (orden == "instalar") {
             // TODO R2b
