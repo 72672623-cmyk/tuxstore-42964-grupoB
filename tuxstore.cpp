@@ -5,9 +5,9 @@
    Institucion: Universidad Continental
    Semestre   : 2026-20
    Compilador : Dev-C++ (MinGW / GCC, C++11 o superior)
-   NRC        :
-   Grupo      :
-   Integrantes:
+   NRC        :  42964
+   Grupo      : B
+   Integrantes: Edson Machaca, Basiler Flores, Juan Diego Quispe, Patrick 
    ============================================================= */
 
 #include <iostream>
@@ -45,17 +45,15 @@ struct NodoBloque {
     NodoBloque *sig;
 };
 
-// ===== FICHA ===== (copiar tal cual en tuxstore.cpp)
+// ===== FICHA =====
 const string SERVIDOR = "pinguino-emperador";
-const int VELOCIDAD = 6;
-const int DISCO = 310;
-const int N_APPS = 8;
-string fNombre[N_APPS] = {"firefox", "neovim", "vlc", "krita", "neofetch",
-"fail2ban", "python3", "openssh"};
-string fVersion[N_APPS] = {"128", "0.9", "3.0", "5.2", "7.1", "1.0", "3.12",
-"9.6"};
-int fMb[N_APPS] = {210, 18, 45, 180, 1, 2, 38, 8};
-int fPrio[N_APPS] = {2, 2, 3, 3, 3, 1, 2, 1};
+const int VELOCIDAD   = 6;
+const int DISCO       = 310;
+const int N_APPS      = 8;
+string fNombre[N_APPS]  = {"firefox", "neovim", "vlc", "krita", "neofetch", "fail2ban", "python3", "openssh"};
+string fVersion[N_APPS] = {"128", "0.9", "3.0", "5.2", "7.1", "1.0", "3.12", "9.6"};
+int    fMb[N_APPS]      = {210, 18, 45, 180, 1, 2, 38, 8};
+int    fPrio[N_APPS]    = {2, 2, 3, 3, 3, 1, 2, 1};
 // =================
 
 string estadoTexto(int e) {
