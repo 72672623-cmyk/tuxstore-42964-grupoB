@@ -208,12 +208,45 @@ int main() {
         }
         else if (orden == "historial") {
             // TODO R4a
+           if (tope == nullptr) {
+                cout << "(historial vacio)" << endl;
+            } else {
+                NodoBloque *aux = tope;
+                while (aux != nullptr) {
+                    cout << "  " << left << setw(12) << aux->nombre << right << setw(5) << aux->mb << " MB" << endl;
+                    aux = aux->sig;
+                }
+           }
         }
         else if (orden == "deshacer") {
             // TODO R4b
+           if (tope == nullptr) {
+              cout << "Nada que deshacer" << endl;
+        }  else {
+             NodoBloque *borrar = tope;
+              tope = tope->sig;
+              NodoApp *app = buscarApp(catalogo, borrar->nombre);
+              if (app != nullptr) {
+                 app->estado = DISPONIBLE;
+                 app->inicio = app->fin = app->espera = -1;
+              }
+              libre = libre + borrar->mb;
+              cout << "Deshecho: " << borrar->nombre << " (" <<borrar->mb << " MB liberados, libres " << libre << " MB)" << endl;
+              delete borrar;
+           }
         }
+           
         else if (orden == "espacio") {
             // TODO R4c
+           int cantBloques = 0;
+            NodoBloque *aux = tope;
+            while (aux != nullptr) {
+                cantBloques++;
+                aux = aux->sig;
+            }
+            int mbOcupados = DISCO - libre;
+            cout << "Disco: total " << DISCO << " MB | ocupado " << mbOcupados
+                 << " MB | libres " << libre << " MB | bloques " << cantBloques << endl;
         }
         else if (orden == "prioridad") {
             // TODO R5a
