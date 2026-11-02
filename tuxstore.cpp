@@ -7,7 +7,7 @@
    Compilador : Dev-C++ (MinGW / GCC, C++11 o superior)
    NRC        :  42964
    Grupo      : B
-   Integrantes: Edson Machaca, Basiler Flores, Juan Diego Quispe, Patrick 
+   Integrantes: Edson Machaca, Basiler Flores, Juan Diego Quispe, Patrick Fernandez
    ============================================================= */
 
 #include <iostream>
