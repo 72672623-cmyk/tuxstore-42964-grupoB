@@ -227,6 +227,19 @@ int main() {
                 ofstream f(ARCHIVO);
                 int n = 0, m = 0;
                 // TODO R6a
+                NodoApp *p = catalogo;
+                while (p != nullptr) {
+                    f << "A " << p->nombre << " " << p->version << " " << p->mb << " "
+                      << p->prioridad << " " << p->estado << endl;
+                    n++;
+                    p = p->sig;
+                }
+                NodoBloque *b = tope;
+                while (b != nullptr) {
+                    f << "B " << b->nombre << " " << b->mb << endl;
+                    m++;
+                    b = b->sig;
+                }               
                 f.close();
                 cout << "Guardado: " << n << " apps y " << m << " bloques en " << ARCHIVO << endl;
             }
