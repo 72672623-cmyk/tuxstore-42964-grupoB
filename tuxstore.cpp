@@ -350,10 +350,15 @@ int main() {
            
         else if (orden == "espacio") {
             // TODO R4c
-            int bloq = 0;
-            NodoBloque *p = tope;
-            while(p!=nullptr){ bloq++; p = p->sig; }
-            cout << "Disco: total " << DISCO << " MB | ocupado " << (DISCO - libre) << " MB | libres " << libre << " MB | bloques " << bloq << "\n";
+           int cantBloques = 0;
+            NodoBloque *aux = tope;
+            while (aux != nullptr) {
+                cantBloques++;
+                aux = aux->sig;
+            }
+            int mbOcupados = DISCO - libre;
+            cout << "Disco: total " << DISCO << " MB | ocupado " << mbOcupados
+                 << " MB | libres " << libre << " MB | bloques " << cantBloques << endl;
         }
         else if (orden == "prioridad") {
             // TODO R5a
