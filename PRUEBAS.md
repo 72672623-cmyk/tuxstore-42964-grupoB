@@ -5,7 +5,7 @@
 | P01 | R1 | `agregar zsh 5.9 7 1` (dos veces) | La segunda vez: `E: No se pudo agregar zsh` |  |  |
 | P02 | R2 | `instalar <app> 5` y luego `instalar <otra> 3` | `E: El segundo debe ser un entero mayor o igual que 5` |  |  |
 | P03 | R3 |  |  |  |  |
-| P04 | R4 |  |  |  |  |
+| P04 | R4 |  | `historial`, `deshacer`, `espacio` | Libera el bloque del tope con delete, devuelve sus MB y la app pasa a disponible |  |
 | P05 | R5 |  |  |  |  |
 | P06 | R6 | `guardar`, `cargar` | Guarda catalogo y pila en tuxstore.txt y al cargar reconstruye sin voltear el tope | `Guardado: 9 apps y 4 bloques en tuxstore.txt` / `Cargado: 9 apps y 4 bloques \| libres 104 MB \| turno nuevo` | SI |
 | P07 | R7 | `hola`, `instalar`, `procesar` con la fila vacia | Mensajes de error; el programa sigue |  |  |
