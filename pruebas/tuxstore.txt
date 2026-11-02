@@ -1,0 +1,13 @@
+A firefox 128 210 2 0
+A neovim 0.9 18 2 2
+A vlc 3.0 45 3 2
+A krita 5.2 180 1 2
+A fail2ban 1.0 2 1 2
+A python3 3.12 38 2 0
+A openssh 9.6 8 1 2
+A gparted 1.5 3 1 0
+B vlc 45
+B fail2ban 2
+B neovim 18
+B krita 180
+B openssh 8
