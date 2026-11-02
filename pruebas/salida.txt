@@ -1,0 +1,53 @@
+Tux Store - servidor pinguino-emperador (6 MB/s, 310 MB). Escribe ayuda.
+tux@pinguino-emperador:~$ > buscar neo
+  neovim      0.9         18 MB   prioridad 2   disponible
+  neofetch    7.1          1 MB   prioridad 3   disponible
+tux@pinguino-emperador:~$ > agregar gparted 1.5 3 1
+Agregada: gparted
+tux@pinguino-emperador:~$ > instalar neofetch 0
+tux@pinguino-emperador:~$ > instalar neovim 1
+tux@pinguino-emperador:~$ > instalar openssh 3
+tux@pinguino-emperador:~$ > fila
+  frente -> openssh(1) -> neovim(2) -> neofetch(3) <- final
+tux@pinguino-emperador:~$ > procesar
+openssh: descarga 2 s | inicio 3 | fin 5 | espera 0 | libres 302 MB
+tux@pinguino-emperador:~$ > instalar vlc 4
+tux@pinguino-emperador:~$ > prioridad krita 1
+Prioridad actualizada
+tux@pinguino-emperador:~$ > instalar krita 8
+tux@pinguino-emperador:~$ > instalar firefox 11
+tux@pinguino-emperador:~$ > fila
+  frente -> krita(1) -> neovim(2) -> firefox(2) -> neofetch(3) -> vlc(3) <- final
+tux@pinguino-emperador:~$ > procesar
+krita: descarga 30 s | inicio 8 | fin 38 | espera 0 | libres 122 MB
+tux@pinguino-emperador:~$ > procesar
+neovim: descarga 3 s | inicio 38 | fin 41 | espera 37 | libres 104 MB
+tux@pinguino-emperador:~$ > procesar
+E: No hay espacio suficiente para firefox: necesita 210 MB, libres 104 MB
+tux@pinguino-emperador:~$ > procesar
+neofetch: descarga 1 s | inicio 41 | fin 42 | espera 41 | libres 103 MB
+tux@pinguino-emperador:~$ > historial
+  neofetch        1 MB
+  neovim         18 MB
+  krita         180 MB
+  openssh         8 MB
+tux@pinguino-emperador:~$ > deshacer
+Deshecho: neofetch (1 MB liberados, libres 104 MB)
+tux@pinguino-emperador:~$ > espacio
+Disco: total 310 MB | ocupado 206 MB | libres 104 MB | bloques 3
+tux@pinguino-emperador:~$ > retirar neofetch
+Retirada: neofetch
+tux@pinguino-emperador:~$ > retirar openssh
+E: Solo se retira una app disponible
+tux@pinguino-emperador:~$ > instalar fail2ban 32
+tux@pinguino-emperador:~$ > procesar
+fail2ban: descarga 1 s | inicio 42 | fin 43 | espera 10 | libres 102 MB
+tux@pinguino-emperador:~$ > procesar
+vlc: descarga 8 s | inicio 43 | fin 51 | espera 39 | libres 57 MB
+tux@pinguino-emperador:~$ > reporte
+Descargas: 6 | MB descargados: 254 | reloj: 51 s
+Espera promedio: 21.17 s
+tux@pinguino-emperador:~$ > guardar
+Guardado: 8 apps y 5 bloques en tuxstore.txt
+tux@pinguino-emperador:~$ > salir
+Nodos liberados: 13. Hasta pronto.
