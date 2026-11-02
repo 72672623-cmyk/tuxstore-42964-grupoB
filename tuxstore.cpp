@@ -90,7 +90,13 @@ bool aEntero(string s, int &v) {
 }
 
 NodoApp* buscarApp(NodoApp *catalogo, string nombre) {
-    // TODO R1a
+    NodoApp *p = catalogo;            // empiezo en el primer nodo
+    while (p != nullptr) {            // recorro hasta el final de la lista
+        if (p->nombre == nombre) {    // comparo el nombre del nodo con el buscado
+            return p;
+        }
+        p = p->sig;
+    }
     return nullptr;
 }
 
