@@ -276,11 +276,14 @@ int main() {
             else {
                 cout << "  frente -> ";
                 NodoFila *p = frente;
+                bool primero = true;
                 while (p != nullptr) {
-                    cout << p->nombre << " (" << p->prioridad << ") -> ";
+                    if (!primero) cout << " -> ";
+                    cout << p->nombre << "(" << p->prioridad << ")";
+                    primero = false;
                     p = p->sig;
                 }
-                cout << "final\n";
+                cout << " <- final\n";
             }
         }
         else if (orden == "procesar") {
@@ -309,7 +312,7 @@ int main() {
                     sumaEspera += app->espera;
                     mbDescargados += app->mb;
                     
-                    cout << app->nombre << ": descarga " << descarga << " s | inicio " << app->inicio << " | fin " << app->fin << "\n";
+                    cout << app->nombre << ": descarga " << descarga << " s | inicio " << app->inicio << " | fin " << app->fin << " | espera " << app->espera << " | libres " << libre << " MB\n";
                     
                     NodoBloque *nb = new NodoBloque;
                     nb->nombre = app->nombre; nb->mb = app->mb; nb->sig = tope;
@@ -320,7 +323,7 @@ int main() {
         }
         else if (orden == "historial") {
             // TODO R4a
-           if (tope == nullptr) {
+            if (tope == nullptr) {
                 cout << "(historial vacio)" << endl;
             } else {
                 NodoBloque *aux = tope;
@@ -328,29 +331,28 @@ int main() {
                     cout << "  " << left << setw(12) << aux->nombre << right << setw(5) << aux->mb << " MB" << endl;
                     aux = aux->sig;
                 }
-           }
+            }
         }
         else if (orden == "deshacer") {
             // TODO R4b
-           if (tope == nullptr) {
-              cout << "Nada que deshacer" << endl;
-        }  else {
-             NodoBloque *borrar = tope;
-              tope = tope->sig;
-              NodoApp *app = buscarApp(catalogo, borrar->nombre);
-              if (app != nullptr) {
-                 app->estado = DISPONIBLE;
-                 app->inicio = app->fin = app->espera = -1;
-              }
-              libre = libre + borrar->mb;
-              cout << "Deshecho: " << borrar->nombre << " (" <<borrar->mb << " MB liberados, libres " << libre << " MB)" << endl;
-              delete borrar;
-           }
+            if (tope == nullptr) {
+                cout << "Nada que deshacer" << endl;
+            }  else {
+                NodoBloque *borrar = tope;
+                tope = tope->sig;
+                NodoApp *app = buscarApp(catalogo, borrar->nombre);
+                if (app != nullptr) {
+                    app->estado = DISPONIBLE;
+                    app->inicio = app->fin = app->espera = -1;
+                }
+                libre = libre + borrar->mb;
+                cout << "Deshecho: " << borrar->nombre << " (" << borrar->mb << " MB liberados, libres " << libre << " MB)" << endl;
+                delete borrar;
+            }
         }
-           
         else if (orden == "espacio") {
             // TODO R4c
-           int cantBloques = 0;
+            int cantBloques = 0;
             NodoBloque *aux = tope;
             while (aux != nullptr) {
                 cantBloques++;
@@ -409,7 +411,7 @@ int main() {
                     f << "B " << b->nombre << " " << b->mb << endl;
                     m++;
                     b = b->sig;
-                }               
+                }                
                 f.close();
                 cout << "Guardado: " << n << " apps y " << m << " bloques en " << ARCHIVO << endl;
             }
