@@ -251,6 +251,57 @@ int main() {
             else {
                 int n = 0, m = 0;
                 // TODO R6b
+                while (catalogo != nullptr) {
+                    NodoApp *aux = catalogo;
+                    catalogo = catalogo->sig;
+                    delete aux;
+                }
+                while (tope != nullptr) {
+                    NodoBloque *aux = tope;
+                    tope = tope->sig;
+                    delete aux;
+                }
+
+                libre = DISCO;
+                NodoBloque *finPila = nullptr;
+                char letra;
+                while (f >> letra) {
+                    if (letra == 'A') {
+                        string nom, ver;
+                        int mb, prio, est;
+                        f >> nom >> ver >> mb >> prio >> est;
+                        if (agregarAlFinal(catalogo, nom, ver, mb, prio)) {
+                            NodoApp *app = buscarApp(catalogo, nom);
+                            if (app != nullptr) {
+                                app->estado = est;
+                            }
+                            n++;
+                        }
+                    } else if (letra == 'B') {
+                        string nom;
+                        int mb;
+                        f >> nom >> mb;
+                        NodoBloque *nuevo = new NodoBloque;
+                        nuevo->nombre = nom;
+                        nuevo->mb = mb;
+                        nuevo->sig = nullptr;
+
+                        if (tope == nullptr) {
+                            tope = nuevo;
+                            finPila = nuevo;
+                        } else {
+                            finPila->sig = nuevo;
+                            finPila = nuevo;
+                        }
+                        libre = libre - mb;
+                        m++;
+                    }
+                }
+                reloj = 0;
+                ultimaLlegada = 0;
+                instalaciones = 0;
+                sumaEspera = 0;
+                mbDescargados = 0;
                 cout << "Cargado: " << n << " apps y " << m << " bloques | libres " << libre
                      << " MB | turno nuevo" << endl;
             }
